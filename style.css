@@ -1,0 +1,201 @@
+/*
+  Theme Name:       ASU Divi
+  Theme URI:        https://research.asu.edu
+  Version:          1.0.0
+  Description:      A child theme of Divi created for ASU.
+  Author:           wsparkhu@asu.edu
+  Author URI:       http://research.asu.edu
+  Template:         Divi
+  GitHub Theme URI: https://github.com/ASU-OKED-WEB-DEV/asu-divi
+*/
+
+@import url("../Divi/style.css");
+
+/*- CSS custom code -*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.44;
+  background-color: white;
+}
+h1, h2, h3, h4 ,h5, h6, strong {
+  font-weight: bold;
+  line-height: 1.44;
+}
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 14px;
+}
+p {
+  font-size: 1em;
+  font-weight: 200;
+}
+.et_pb_bg_layout_light a {
+  color: #8C1D40;
+}
+.et_pb_bg_layout_dark a {
+  color: #FFC627;
+}
+.et_pb_bg_layout_light a:hover {
+  border-bottom: 1px dotted;
+}
+.et_pb_bg_layout_dark a:hover {
+  border-bottom: 1px dotted;
+}
+
+/* DIVI MAIN NAV */
+/* Header & Navigation > Primary Menu > Menu Height 40 */
+/* Color Schemes: Orange */
+.logo_container {
+  display: none;
+}
+#asu_hdr {
+  max-width: 1100px;
+  width: 82%;
+  margin: 0 auto !important;
+}
+.header__sitename {
+  color: #2a2a2a;
+  font-size: 24px !important;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0 0 12px 10px !important;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 82%;
+  max-width: 1100px;
+  margin: auto;
+}
+#main-header {
+  z-index: 10;
+}
+@media (min-width: 981px) {
+  #main-header {
+    background: #353535;
+    height: 54px;
+    line-height: 22px;
+    top: 0 !important;
+  }
+}
+#et-top-navigation {
+  float: left;
+  padding-left: 0 !important;
+}
+@media only screen and (min-width: 981px) {
+  .et_header_style_left #et-top-navigation, .et_header_style_split #et-top-navigation {
+      padding: 0 !important;
+  }
+}
+#top-menu > li > a {
+  padding: 20px;
+}
+#top-menu li {
+    display: inline-block;
+    padding-right: 0;
+}
+.et_color_scheme_orange #top-menu li.current-menu-ancestor>a,
+.et_color_scheme_orange #top-menu li.current-menu-item>a {
+    color: #edb059;
+    background: #000000;
+}
+#et-secondary-nav .menu-item-has-children>a:first-child:after,
+#top-menu .menu-item-has-children>a:first-child:after {
+    top: 20px;
+}
+
+/* CONTENT */
+#content-area a {
+  color: #8c1d40;
+}
+#content-area a:hover {
+  border-bottom: 1px dotted;
+}
+#content-area a.et_pb_button:hover {
+  border: 2px solid transparent;
+}
+
+/* SINGLE */
+.single #main-content #dce-custom-post {
+  padding-top: 40px;
+}
+.has-post-thumbnail .et_pb_image_container {
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+}
+
+/* FOOTER */
+#innovation-footer {
+  box-shadow: 0px 500px 0px 500px #e5e5e5;
+}
+.et_color_scheme_orange #footer-widgets .footer-widget a {
+  color: #A9A9A9;
+}
+.et_color_scheme_orange #footer-widgets .footer-widget a:hover {
+  color: #FFC627;
+  border-bottom: 1px dotted;
+}
+.et_color_scheme_orange #footer-widgets .footer-widget .title {
+  color: #FFFFFF;
+}
+ul.menu a {
+  color: #A9A9A9;
+}
+.et_pb_bg_layout_light ul.menu .current_page_item a {
+    color: #8C1D40;
+}
+.et_pb_bg_layout_dark ul.menu .current_page_item a {
+    color: #FFC627;
+}
+.et_pb_bg_layout_light ul.menu a:hover {
+  color: #8C1D40;
+  border-bottom: 1px dotted;
+}
+.et_pb_bg_layout_dark ul.menu a:hover {
+  color: #FFC627;
+  border-bottom: 1px dotted;
+}
+#footer-widgets .footer-widget li {
+    position: relative;
+    padding-left: 0;
+}
+#footer-widgets .footer-widget li:before {
+  border: none;
+}
+
+.et_overlay:before,
+.et_pb_bg_layout_light .et_pb_more_button,
+.et_pb_bg_layout_light .et_pb_newsletter_button,
+.et_pb_bg_layout_light .et_pb_promo_button,
+.et_pb_bg_layout_light.et_pb_module.et_pb_button,
+.et_pb_contact_submit,
+.et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active,
+.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active,
+.et_pb_gallery .et_pb_gallery_pagination ul li a.active,
+.et_pb_member_social_links a:hover,
+.et_pb_pricing li a,
+.et_pb_pricing_table_button,
+.et_pb_sum, .woocommerce-page #content input.button:hover
+.et_pb_widget li a:hover {
+    color: #edb059;
+}
