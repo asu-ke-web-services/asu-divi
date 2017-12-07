@@ -1,7 +1,7 @@
 /*
   Theme Name:       ASU Divi
   Theme URI:        https://research.asu.edu
-  Version:          1.0.0
+  Version:          1.0.1
   Description:      A child theme of Divi created for ASU.
   Author:           wsparkhu@asu.edu
   Author URI:       http://research.asu.edu
@@ -75,6 +75,7 @@ p {
 .header__sitename {
   color: #2a2a2a;
   font-size: 24px !important;
+  font-weight: bold;
   line-height: 1;
   margin-top: 0;
   margin-bottom: 0;
@@ -85,6 +86,12 @@ p {
   width: 82%;
   max-width: 1100px;
   margin: auto;
+}
+.header__sitename_wrapper a {
+  color: #2a2a2a;
+}
+.header__sitename:hover {
+    color: #d23153;
 }
 #main-header {
   z-index: 10;
@@ -113,8 +120,8 @@ p {
     display: inline-block;
     padding-right: 0;
 }
-.et_color_scheme_orange #top-menu li.current-menu-ancestor>a,
-.et_color_scheme_orange #top-menu li.current-menu-item>a {
+#top-menu li.current-menu-ancestor>a,
+#top-menu li.current-menu-item>a {
     color: #edb059;
     background: #000000;
 }
@@ -124,10 +131,13 @@ p {
 }
 
 /* CONTENT */
-#content-area a {
+#content-area a,
+.et_pb_bg_layout_light .et_pb_widget li a {
   color: #8c1d40;
 }
-#content-area a:hover {
+#content-area a:hover,
+.et_pb_bg_layout_light .et_pb_widget li a:hover {
+  color: #8c1d40;
   border-bottom: 1px dotted;
 }
 #content-area a.et_pb_button:hover {
@@ -148,14 +158,14 @@ p {
 #innovation-footer {
   box-shadow: 0px 500px 0px 500px #e5e5e5;
 }
-.et_color_scheme_orange #footer-widgets .footer-widget a {
-  color: #A9A9A9;
+#footer-widgets .footer-widget a {
+  color: #A9A9A9 !important;
 }
-.et_color_scheme_orange #footer-widgets .footer-widget a:hover {
-  color: #FFC627;
-  border-bottom: 1px dotted;
+#footer-widgets .footer-widget a:hover {
+  color: #FFC627 !important;
+  border-bottom: 1px dotted !important;
 }
-.et_color_scheme_orange #footer-widgets .footer-widget .title {
+#footer-widgets .footer-widget .title {
   color: #FFFFFF;
 }
 ul.menu a {

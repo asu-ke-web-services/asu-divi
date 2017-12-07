@@ -46,7 +46,7 @@ $request = wp_remote_get('http://www.asu.edu/asuthemes/4.6/headers/default.shtml
 $response = wp_remote_retrieve_body( $request );
 echo $response;
 ?>
-<div class="header__sitename"><span><?php bloginfo( 'name' ); ?></span></div>
+<div class="header__sitename_wrapper"><a href="/" title="Home" rel="home" class="header__sitename"><?php bloginfo( 'name' ); ?></a></span></div>
 <!-- End ASU Headers -->
 <?php
 	$product_tour_enabled = et_builder_is_product_tour_enabled();
