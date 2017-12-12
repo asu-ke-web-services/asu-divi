@@ -1,7 +1,7 @@
 /*
   Theme Name:       ASU Divi
   Theme URI:        https://research.asu.edu
-  Version:          1.0.2
+  Version:          1.0.3
   Description:      A child theme of Divi created for ASU.
   Author:           wsparkhu@asu.edu
   Author URI:       http://research.asu.edu
@@ -274,5 +274,18 @@ ul.menu a {
   .et_pb_widget_area,
   #sidebar {
     display: none;
+  }
+}
+
+
+
+/* CONTAINERS AND CONTENT AREA SPACING */
+#main-content .container {
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+@media only screen and (max-width: 980px) {
+  .et_pb_section {
+      padding: 0 0 0 0;
   }
 }
