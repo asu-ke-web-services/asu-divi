@@ -1,7 +1,7 @@
 /*
   Theme Name:       ASU Divi
   Theme URI:        https://research.asu.edu
-  Version:          1.0.3
+  Version:          1.0.4
   Description:      A child theme of Divi created for ASU.
   Author:           wsparkhu@asu.edu
   Author URI:       http://research.asu.edu
@@ -125,7 +125,7 @@ p {
   }
 }
 #top-menu > li > a {
-  padding: 20px;
+  padding: 20px !important;
 }
 #top-menu li {
   display: inline-block;
@@ -288,4 +288,31 @@ ul.menu a {
   .et_pb_section {
       padding: 0 0 0 0;
   }
+}
+
+
+
+/* NINJA FORMS */
+.nf-form-cont {
+	margin: 0 auto;
+	max-width: 800px;
+	background-color: #eee;
+	padding: 40px;
+	border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow:    0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+  box-shadow:         0px 0px 10px 0px rgba(0, 0, 0, 0.7);
+}
+.nf-form-cont .nf-field {
+	margin: 30px 0 0 0;
+}
+.nf-form-cont input,
+.nf-form-cont textarea {
+    padding: 16px !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 5px !important;
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    font-size: 18px;
 }
