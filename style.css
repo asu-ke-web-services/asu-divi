@@ -1,7 +1,7 @@
 /*
   Theme Name:       ASU Divi
   Theme URI:        https://research.asu.edu
-  Version:          1.0.6
+  Version:          1.0.7
   Description:      A child theme of Divi created for ASU.
   Author:           wsparkhu@asu.edu
   Author URI:       http://research.asu.edu
@@ -19,7 +19,7 @@
 
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.44;
   background-color: white;
@@ -49,8 +49,13 @@ h6 {
   font-size: 14px;
 }
 p {
-  font-size: 1em;
+  font-size: 18px;
   font-weight: 200;
+}
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
 }
 
 
@@ -267,15 +272,22 @@ ul.menu a {
 
 
 /* SIDEMENU */
+#main-content .et_pb_widget ul {
+  padding-top: 10px !important;
+}
+#main-content .et_pb_widget ul li {
+  margin-bottom: .5em;
+  padding-bottom: 10px;
+}
 .et_pb_bg_layout_light .et_pb_widget li a:link {
-    color: #666666 !important;
+  color: #666666 !important;
 }
 .et_pb_bg_layout_light .widget_nav_menu .current_page_item a:link {
-    color: #8C1D40 !important;
+  color: #8C1D40 !important;
 	font-weight: bold;
 }
 .et_pb_bg_layout_light .et_pb_widget li a:hover {
-    color: #d23153 !important;
+  color: #d23153 !important;
 }
 @media only screen and (max-width: 980px) {
   #asu_hdr #asu_mobile_hdr > #asu_mobile_button,
@@ -291,9 +303,14 @@ ul.menu a {
   #et_mobile_nav_menu {
     display: block;
   }
-  .et_pb_widget_area,
-  #sidebar {
-    display: none;
+  #main-content	.et_pb_widget {
+    width: 100% !important;
+  }
+  #main-content .et_pb_widget ul {
+    border-top: 1px solid #eeeeee;
+  }
+  #main-content .et_pb_widget ul li {
+    border-bottom: 1px solid #eee;
   }
 }
 
