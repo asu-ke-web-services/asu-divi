@@ -1,5 +1,6 @@
 ## ASU Divi
-A child theme of Divi created for ASU.
+A child theme of Divi created for ASU. Current development site: 
+http://dev-faculty.ws.asu.edu/
 
 
 ## Description
@@ -17,20 +18,6 @@ For proper usage please follow the installation instructions provided. This incl
 1. Click restore.
 1. Login as an administrator.
 1. Change administrator and default editor passwords.
-
-
-## Manual Installation
-
-Install WordPress manually and configure settings. 
-
-1. Install WordPress.
-1. Create first user (enter a username/password). 
-1. Add new administrator user.
-1. Login and second administrator and delete the default first user account.
-1. Install the Divi theme.
-1. Download the ASU Divi theme and activate.
-1. Download the GitHub Updater plugin and activate.
-1. Configure Divi settings. Details to be provided.
 
 
 ## MIT License
