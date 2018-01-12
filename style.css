@@ -1,7 +1,7 @@
 /*
   Theme Name:       ASU Divi
   Theme URI:        https://research.asu.edu
-  Version:          1.0.7
+  Version:          1.0.8
   Description:      A child theme of Divi created for ASU.
   Author:           wsparkhu@asu.edu
   Author URI:       http://research.asu.edu
@@ -20,18 +20,18 @@
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  font-weight: 300;
   line-height: 1.44;
+  font-weight: 300;
   background-color: white;
 }
 h1, h2, h3, h4 ,h5, h6, strong {
-  font-weight: bold;
   line-height: 1.44;
+  font-weight: bold;
 }
 h1 {
   font-size: 60px;
-  font-weight: 900;
   line-height: 1;
+  font-weight: 900;
 }
 h2 {
   font-size: 36px;
@@ -61,53 +61,100 @@ p {
 
 
 /* LINK COLORS */
-.et_pb_bg_layout_light a:link {
-  color: #8C1D40;
+
+/* LINKS CONTENT DEFAULTS */
+#main-content h1 a:link,
+#main-content h1 a:visited,
+#main-content h2 a:link,
+#main-content h2 a:visited,
+#main-content h3 a:link,
+#main-content h3 a:visited,
+#main-content h4 a:link,
+#main-content h4 a:visited,
+#main-content h5 a:link,
+#main-content h5 a:visited,
+#main-content h6 a:link,
+#main-content h6 a:visited,
+#main-content p a:link,
+#main-content p a:visited {
+  color: #8c1d40;
 }
-.et_pb_bg_layout_dark a:link {
-  color: #FFC627;
-}
-.et_pb_bg_layout_light a:hover {
+#main-content h1 a:hover,
+#main-content h1 a:active,
+#main-content h2 a:hover,
+#main-content h2 a:active,
+#main-content h3 a:hover,
+#main-content h3 a:active,
+#main-content h4 a:hover,
+#main-content h4 a:active,
+#main-content h5 a:hover,
+#main-content h5 a:active,
+#main-content h6 a:hover,
+#main-content h6 a:active,
+#main-content p a:hover,
+#main-content p a:active {
   color: #d23153;
 }
-#content-area a:link,
-.et_pb_bg_layout_light .et_pb_widget li a:link {
-  color: #8C1D40;
+/* LINKS CONTENT DARK */
+#main-content .et_pb_bg_layout_dark h1 a:link,
+#main-content .et_pb_bg_layout_dark h1 a:visited,
+#main-content .et_pb_bg_layout_dark h2 a:link,
+#main-content .et_pb_bg_layout_dark h2 a:visited,
+#main-content .et_pb_bg_layout_dark h3 a:link,
+#main-content .et_pb_bg_layout_dark h3 a:visited,
+#main-content .et_pb_bg_layout_dark h4 a:link,
+#main-content .et_pb_bg_layout_dark h4 a:visited,
+#main-content .et_pb_bg_layout_dark h5 a:link,
+#main-content .et_pb_bg_layout_dark h5 a:visited,
+#main-content .et_pb_bg_layout_dark h6 a:link,
+#main-content .et_pb_bg_layout_dark h6 a:visited {
+  color: #ffffff;
 }
-#content-area a:hover,
-.et_pb_bg_layout_light .et_pb_widget li a:hover {
-  color: #d23153;
+#main-content .et_pb_bg_layout_dark a:link,
+#main-content .et_pb_bg_layout_dark a:visited {
+  color: #a9a9a9;
 }
-#content-area a.et_pb_button:hover {
-  border: 2px solid transparent;
+#main-content .et_pb_bg_layout_dark h1 a:hover,
+#main-content .et_pb_bg_layout_dark h1 a:active,
+#main-content .et_pb_bg_layout_dark h2 a:hover,
+#main-content .et_pb_bg_layout_dark h2 a:active,
+#main-content .et_pb_bg_layout_dark h3 a:hover,
+#main-content .et_pb_bg_layout_dark h3 a:active,
+#main-content .et_pb_bg_layout_dark h4 a:hover,
+#main-content .et_pb_bg_layout_dark h4 a:active,
+#main-content .et_pb_bg_layout_dark h5 a:hover,
+#main-content .et_pb_bg_layout_dark h5 a:active,
+#main-content .et_pb_bg_layout_dark h6 a:hover,
+#main-content .et_pb_bg_layout_dark h6 a:active,
+#main-content .et_pb_bg_layout_dark a:hover,
+#main-content .et_pb_bg_layout_dark a:active {
+  color: #ffc627;
 }
 
 
 
 /* HEADER */
 /* Header & Navigation > Primary Menu > Menu Height 40 */
+#asu_hdr {
+  width: 82%;
+  max-width: 1100px;
+  margin: 0 auto !important;
+}
 .logo_container {
   display: none;
 }
-#asu_hdr {
-  max-width: 1100px;
-  width: 82%;
-  margin: 0 auto !important;
-}
 .header__sitename {
-  color: #2a2a2a;
-  font-size: 24px !important;
-  font-weight: bold;
-  line-height: 1;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0 0 12px 10px !important;
-  white-space: nowrap;
-  overflow: hidden;
   position: relative;
   width: 82%;
   max-width: 1100px;
-  margin: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 0 12px 10px !important;
+  font-size: 24px !important;
+  line-height: 1;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #2a2a2a;
 }
 .header__sitename_wrapper a {
   color: #2a2a2a;
@@ -124,12 +171,13 @@ p {
 }
 @media only screen and (min-width: 981px) {
   #main-header {
-    background: #353535;
+    top: 0 !important;
     height: 54px;
     line-height: 22px;
-    top: 0 !important;
+    background: #353535;
   }
-  .et_header_style_left #et-top-navigation, .et_header_style_split #et-top-navigation {
+  .et_header_style_left #et-top-navigation,
+  .et_header_style_split #et-top-navigation {
       padding: 0 !important;
   }
 }
@@ -138,8 +186,8 @@ p {
 }
 #top-menu li {
   display: inline-block;
-  padding-right: 0;
   height: 54px;
+  padding-right: 0;
 }
 #top-menu li.current-menu-ancestor>a,
 #top-menu li.current-menu-item>a {
@@ -151,10 +199,10 @@ p {
   top: 20px;
 }
 #top-menu .menu-item-has-children>a:first-child {
-    padding-right: 30px !important;
+  padding-right: 30px !important;
 }
 #top-menu .menu-item-has-children>a:first-child:after {
-    right: 10px;
+  right: 10px;
 }
 @media only screen and (max-width: 768px) {
   #asu_logo {
@@ -167,19 +215,19 @@ p {
   }
 }
 ul.menu a {
-  color: #A9A9A9;
+  color: #a9a9a9;
 }
 .et_pb_bg_layout_light ul.menu .current_page_item a {
-  color: #8C1D40;
+  color: #8c1d40;
 }
 .et_pb_bg_layout_dark ul.menu .current_page_item a {
-  color: #FFC627;
+  color: #ffc627;
 }
 .et_pb_bg_layout_light ul.menu a:hover {
   color: #d23153;
 }
 .et_pb_bg_layout_dark ul.menu a:hover {
-  color: #FFC627;
+  color: #ffc627;
 }
 
 
@@ -195,7 +243,7 @@ ul.menu a {
 }
 @media (max-width: 980px) {
   .et_pb_section {
-      padding: 25px 0 50px 0;
+    padding: 25px 0 50px 0;
   }
 }
 
@@ -205,8 +253,8 @@ ul.menu a {
 .archive .has-post-thumbnail > a:nth-child(1),
 .search .has-post-thumbnail > a:nth-child(1),
 .blog .has-post-thumbnail > a:nth-child(1) {
-  width: 33%;
   float: right;
+  width: 33%;
   padding: 0 0 20px 20px;
 }
 .archive .has-post-thumbnail a img,
@@ -245,16 +293,18 @@ ul.menu a {
 
 /* FOOTER */
 #innovation-footer {
-  box-shadow: 0px 500px 0px 500px #e5e5e5;
-}
-#footer-widgets .footer-widget a {
-  color: #A9A9A9 !important;
-}
-#footer-widgets .footer-widget a:hover {
-  color: #FFC627 !important;
+  box-shadow: 0px 500px 0px 500px #E5E5E5;
 }
 #footer-widgets .footer-widget .title {
-  color: #FFFFFF;
+  color: #ffffff;
+}
+#footer-widgets .footer-widget a:link,
+#footer-widgets .footer-widget a:visited {
+  color: #a9a9a9 !important;
+}
+#footer-widgets .footer-widget a:hover,
+#footer-widgets .footer-widget a:active {
+  color: #ffc627 !important;
 }
 #footer-widgets .footer-widget li {
   position: relative;
@@ -271,23 +321,25 @@ ul.menu a {
 
 
 
-/* SIDEMENU */
+/* SIDEBAR */
+#sidebar a:link,
+#sidebar a:visited {
+  color: #666666;
+}
+#sidebar .current_page_item a {
+  font-weight: bold;
+  color: #000000;
+}
+#sidebar a:hover,
+#sidebar a:active {
+  color: #d23153;
+}
 #main-content .et_pb_widget ul {
   padding-top: 10px !important;
 }
 #main-content .et_pb_widget ul li {
   margin-bottom: .5em;
   padding-bottom: 10px;
-}
-.et_pb_bg_layout_light .et_pb_widget li a:link {
-  color: #666666 !important;
-}
-.et_pb_bg_layout_light .widget_nav_menu .current_page_item a:link {
-  color: #8C1D40 !important;
-	font-weight: bold;
-}
-.et_pb_bg_layout_light .et_pb_widget li a:hover {
-  color: #d23153 !important;
 }
 @media only screen and (max-width: 980px) {
   #asu_hdr #asu_mobile_hdr > #asu_mobile_button,
@@ -310,7 +362,7 @@ ul.menu a {
     border-top: 1px solid #eeeeee;
   }
   #main-content .et_pb_widget ul li {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eeeeee;
   }
 }
 
@@ -329,12 +381,25 @@ ul.menu a {
 
 
 
+/* DIVI COMPONENT OVERRIDES */
+#main-content a.et_pb_button:hover {
+  border: 2px solid transparent;
+}
+#main-content a.et_pb_button.et_pb_bg_layout_light {
+  color: #ffc627 !important;
+}
+#main-content a.et_pb_button.et_pb_bg_layout_dark {
+  color: #ffc627 !important;
+}
+
+
+
 /* NINJA FORMS */
 .nf-form-cont {
+  max-width: 800px;
 	margin: 0 auto;
-	max-width: 800px;
-	background-color: #eee;
 	padding: 40px;
+	background-color: #eeeeee;
 	border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
   -moz-box-shadow:    0px 0px 10px 0px rgba(0, 0, 0, 0.7);
@@ -345,11 +410,11 @@ ul.menu a {
 }
 .nf-form-cont input,
 .nf-form-cont textarea {
-    padding: 16px !important;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 5px !important;
-    color: #000000 !important;
-    background-color: #ffffff !important;
-    font-size: 18px;
+  padding: 16px !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 5px !important;
+  font-size: 18px;
+  color: #000000 !important;
+  background-color: #ffffff !important;
 }
