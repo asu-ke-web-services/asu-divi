@@ -59,7 +59,6 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 
 	<!-- Javascript -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="/wp-content/themes/asu-divi/js/rtd.js"></script>
 
 </body>

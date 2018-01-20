@@ -1,7 +1,7 @@
 /*
   Theme Name:       ASU Divi
   Theme URI:        https://research.asu.edu
-  Version:          1.0.9
+  Version:          1.0.10
   Description:      A child theme of Divi created for ASU.
   Author:           wsparkhu@asu.edu
   Author URI:       http://research.asu.edu
@@ -61,8 +61,6 @@ p {
 
 
 /* LINK COLORS */
-
-/* LINKS CONTENT DEFAULTS */
 #main-content h1 a:link,
 #main-content h1 a:visited,
 #main-content h2 a:link,
@@ -182,7 +180,7 @@ p {
   }
 }
 #top-menu > li > a {
-  padding: 20px !important;
+  padding: 18px 20px !important;
   height: 54px;
 }
 #top-menu li {
@@ -401,7 +399,8 @@ ul.menu a {
   max-width: 800px;
 	margin: 0 auto;
 	padding: 40px;
-	background-color: #eeeeee;
+	background-color: #fffdf8;
+  border: 1px solid #f7e3c9;
 	border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
   -moz-box-shadow:    0px 0px 10px 0px rgba(0, 0, 0, 0.7);
