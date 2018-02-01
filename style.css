@@ -1,7 +1,7 @@
 /*
   Theme Name:       ASU Divi
   Theme URI:        https://research.asu.edu
-  Version:          1.0.11
+  Version:          1.0.12
   Description:      A child theme of Divi created for ASU.
   Author:           wsparkhu@asu.edu
   Author URI:       http://research.asu.edu
@@ -391,6 +391,9 @@ ul.menu a {
 #main-content a.et_pb_button.et_pb_bg_layout_dark {
   color: #ffc627 !important;
 }
+.et_pb_text_inner {
+  overflow: hidden;
+}
 /* TABLE BORDERS WHITE */
 .entry-content table, body.et-pb-preview #main-content .container table {
   border: 1px solid #fff;
@@ -409,18 +412,29 @@ ul.menu a {
 }
 
 
+/* CAPTIONS */
+.wp-caption {
+  float: right;
+  max-width: 50% !important;
+  margin-left: 20px;
+  padding-top: 8px;
+}
+.wp-caption img {
+  width: 100%;
+}
+@media all and (max-width: 767px) {
+  .wp-caption {
+    max-width: 100% !important;
+    width: 100%;
+  }
+}
+
+
 
 /* NINJA FORMS */
 .nf-form-cont {
-  max-width: 800px;
+  max-width: 700px;
 	margin: 0 auto;
-	padding: 40px;
-	background-color: #fffdf8;
-  border: 1px solid #f7e3c9;
-	border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow:    0px 0px 10px 0px rgba(0, 0, 0, 0.7);
-  box-shadow:         0px 0px 10px 0px rgba(0, 0, 0, 0.7);
 }
 .nf-form-cont .nf-field {
 	margin: 30px 0 0 0;
