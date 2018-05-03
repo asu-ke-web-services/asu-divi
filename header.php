@@ -32,22 +32,15 @@
 
 	<?php wp_head(); ?>
 	<!-- Begin ASU Heads -->
-	<?php
-	$request = wp_remote_get('http://www.asu.edu/asuthemes/4.6/heads/default.shtml');
-	$response = wp_remote_retrieve_body( $request );
-	echo $response;
-	?>
+	<?php asuwp_load_global_head_scripts(); ?>
 	<!-- END ASU Heads -->
 </head>
 <body <?php body_class(); ?>>
-<!-- Begin ASU Headers -->
-<?php
-$request = wp_remote_get('http://www.asu.edu/asuthemes/4.6/headers/default.shtml');
-$response = wp_remote_retrieve_body( $request );
-echo $response;
-?>
-<div class="header__sitename_wrapper"><a href="/" title="Home" rel="home" class="header__sitename"><?php bloginfo( 'name' ); ?></a></span></div>
-<!-- End ASU Headers -->
+
+<!-- Begin ASU Header  -->
+<?php asuwp_load_global_header(); ?>
+<!-- END ASU Header -->
+
 <?php
 	$product_tour_enabled = et_builder_is_product_tour_enabled();
 	$page_container_style = $product_tour_enabled ? ' style="padding-top: 0px;"' : ''; ?>

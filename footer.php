@@ -47,19 +47,13 @@ if ( ! is_page_template( 'page-template-blank.php' ) ) : ?>
 
 	</div> <!-- #page-container -->
 
-	<?php wp_footer(); ?>
-
 	<!-- Begin ASU Footer -->
-	<?php
-	$request = wp_remote_get('http://www.asu.edu/asuthemes/4.6/includes/footer.shtml');
-	$response = wp_remote_retrieve_body( $request );
-	echo $response;
-	?>
+	<?php asuwp_load_global_footer(); ?>
 	<!-- END ASU Footer -->
 
-	<!-- Javascript -->
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<script src="/wp-content/themes/asu-divi/js/rtd.js"></script>
+	<?php wp_footer(); ?>
 
 </body>
 </html>
+
+
