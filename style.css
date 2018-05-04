@@ -9,14 +9,6 @@
   GitHub Theme URI: https://github.com/ASU-OKED-WEB-DEV/asu-divi
 */
 
-@import url("../Divi/style.css");
-
-/*- CSS custom code -*/
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i');
-
-
-
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
