@@ -20,7 +20,7 @@ function asuwp_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'asuwp_enqueue_scripts' );
 
-// Load global assets via remote get.
+// Load global assets via remote get. Allows for easy access to the version in each of the URLs below.
 function asuwp_load_global_head_scripts() {
 	$request = wp_remote_get('http://www.asu.edu/asuthemes/4.6/heads/default.shtml');
 	$response = wp_remote_retrieve_body( $request );
@@ -40,3 +40,23 @@ function asuwp_load_global_footer() {
     echo $response;
 }
 
+// Add custom home icon & menu entry to main nav manu.
+function asuwp_add_home_menu_icon ( $items, $args ) {
+    if ($args->theme_location == 'primary-menu') {
+
+        if (is_home()) {
+            $homeicon = '<li id="menu-item-home" class="menu_item current-menu-item">';
+        } else {
+            $homeicon = '<li id="menu-item-home" class="menu_item">';
+        }
+
+        $homeicon .= '<a href="' . get_home_url() . '" title="Home" id="home-icon-main-nav">';
+        $homeicon .= '<span class="fa fa-home" aria-hidden="true"></span>';
+        $homeicon .= '</a>';
+        $homeicon .= '</li>';
+        
+        $items = $homeicon . $items;
+    }
+    return $items;
+}
+add_filter( 'wp_nav_menu_items', 'asuwp_add_home_menu_icon', 10, 2 );
