@@ -1,6 +1,6 @@
 ## ASU Divi
 A child theme of Divi created for ASU. Current development site: 
-http://dev-faculty.ws.asu.edu/
+https://researchwebservices.rtd.asu.edu/
 
 
 ## Description
