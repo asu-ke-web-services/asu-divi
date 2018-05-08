@@ -124,6 +124,40 @@ p {
 
 
 /* HEADER */
+
+/* Site Name + Subsite Name */
+#sitename-wrapper {
+  position: relative;
+  width: 82%;
+  max-width: 1100px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 0 12px 10px !important;font-size: 24px !important;
+}
+
+#sitename-wrapper a {
+    color: #666666;
+    font-weight:bold;
+    white-space: nowrap;
+    text-decoration: none;
+    border-bottom: none;
+    transition: none;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+#sitename-wrapper #parent-site {
+  color: #2a2a2a;
+}
+
+#sitename-wrapper #parent-site:hover,
+#sitename-wrapper #current-site:hover{
+  color: #d23153;
+}
+
 /* Header & Navigation > Primary Menu > Menu Height 40 */
 #asu_hdr {
   width: 82%;
@@ -133,25 +167,7 @@ p {
 .logo_container {
   display: none;
 }
-.header__sitename {
-  position: relative;
-  width: 82%;
-  max-width: 1100px;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 0 0 12px 10px !important;
-  font-size: 24px !important;
-  line-height: 1;
-  font-weight: bold;
-  white-space: nowrap;
-  color: #2a2a2a;
-}
-.header__sitename_wrapper a {
-  color: #2a2a2a;
-}
-.header__sitename:hover {
-  color: #d23153;
-}
+
 #main-header {
   z-index: 10;
 }
@@ -224,7 +240,6 @@ ul.menu a {
 }
 
 
-
 /* SINGLE */
 .single #main-content #dce-custom-post {
   padding-top: 40px;
@@ -282,32 +297,163 @@ ul.menu a {
   }
 }
 
+/* Footer, Branding Area */
+
+#main-footer div,
+#main-footer p,
+#main-footer span {
+    color: #fff
+}
+
+#main-footer h1 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2
+}
+
+#main-footer h2 {
+    color: #fff;
+    font-size: 1.3125rem;
+    font-weight: 400
+}
+
+#main-footer h3,
+#main-footer h4,
+#main-footer h5,
+#main-footer h6 {
+    color: #fff
+}
+
+#main-footer .et_pb_row {
+  padding:40px 0;
+}
+
+#main-footer .footer-logo {
+  /* Transform the default image to 112.5% of the original size to get rid of embedded padding. */
+  transform: scale(1.125, 1.125);
+  transition: .5s;
+  transform-origin: center;
+}
+
+#main-footer .footer-logo:hover {
+  /* Scale up to 120% on hover. */
+  transform: scale(1.2, 1.2);
+}
+
+#main-footer #footer-branding .footer-text {
+    padding-bottom: 10px;
+}
+
+#main-footer .phone-link,#main-footer a:not(.et_pb_button),#main-footer address {
+    border-bottom-color: #ccc;
+    color: #ccc;
+    margin-bottom: 0
+}
+
+#main-footer .contact-link {
+    border-bottom-color: #a9a9a9;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    color: #a9a9a9
+}
+
+#main-footer .contact-link:focus,#main-footer .contact-link:hover {
+    color: #fff
+}
+
+#main-footer ol,#main-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+#main-footer ol:after,#main-footer ol:before,#main-footer ul:after,#main-footer ul:before {
+    content: ' ';
+    display: table
+}
+
+#main-footer ol:after,#main-footer ul:after {
+    clear: both
+}
+
+#main-footer ol>li,#main-footer ul>li {
+    display: block;
+    position: relative
+}
+
+#main-footer ol>li>a,#main-footer ul>li>a {
+    position: relative;
+    text-decoration: none
+}
+
+#main-footer ol>li>a:focus,#main-footer ol>li>a:hover,#main-footer ul>li>a:focus,#main-footer ul>li>a:hover {
+    text-decoration: none
+}
+
+#main-footer .social-media {
+    margin-bottom: 30px
+}
+
+#main-footer .social-media>li {
+    float: left
+}
+
+#main-footer .social-media>li>a {
+    border-bottom: 0;
+    color: #a9a9a9;
+    font-size: 2.375rem;
+    margin-right: 10px
+}
+
+#main-footer .social-media>li>a:focus,#main-footer .social-media>li>a:hover {
+    color: #fff
+}
+
+#main-footer .social-media>li:last-child>a {
+    margin-right: 0
+}
+
+#contribute-button-in-footer {
+    border-color: #8c1d40;
+    color: #ffffff;
+    background-color: #8c1d40;
+}
+
+#main-footer #footer-widgets {
+  padding:10px 0;
+}
+
+#footer-widgets .footer-widget {
+    /* Assuming there are only two widget areas left... */
+    width: 44%;
+}
 
 
 /* FOOTER */
 #innovation-footer {
   box-shadow: 0px 500px 0px 500px #E5E5E5;
 }
-#footer-widgets .footer-widget .title {
+#footer-widgets #main-footer-widget .title {
   color: #ffffff;
 }
-#footer-widgets .footer-widget a:link,
-#footer-widgets .footer-widget a:visited {
+#footer-widgets #main-footer-widget a:link,
+#footer-widgets #main-footer-widget a:visited {
   color: #a9a9a9 !important;
 }
-#footer-widgets .footer-widget a:hover,
-#footer-widgets .footer-widget a:active {
+#footer-widgets #main-footer-widget a:hover,
+#footer-widgets #main-footer-widget a:active {
   color: #ffc627 !important;
 }
-#footer-widgets .footer-widget li {
+#footer-widgets #main-footer-widget li {
   position: relative;
   padding-left: 0;
 }
-#footer-widgets .footer-widget li:before {
+#footer-widgets #main-footer-widget li:before {
   border: none;
 }
 @media only screen and (max-width: 980px) {
-  .footer-widget:nth-child(1) {
+  #main-footer-widget:nth-child(1) {
       width: 100%!important;
   }
 }
