@@ -1,7 +1,7 @@
 /*
   Theme Name:       ASU Divi
   Theme URI:        https://research.asu.edu
-  Version:          1.0.16
+  Version:          1.0.17
   Description:      A child theme of Divi created for ASU.
   Author:           wsparkhu@asu.edu
   Author URI:       http://research.asu.edu
@@ -13,7 +13,7 @@ body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.44;
-  font-weight: 300;
+  font-weight: 400;
   background-color: white;
 }
 h1, h2, h3, h4 ,h5, h6, strong {
@@ -42,7 +42,6 @@ h6 {
 }
 p {
   font-size: 18px;
-  font-weight: 200;
 }
 @media only screen and (max-width: 768px) {
   h1 {
