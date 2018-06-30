@@ -18,7 +18,7 @@
 							</div> <!-- .et_pb_column -->
 							
 							<div id="footer-widgets" class="clearfix et_pb_column">
-								<?php get_sidebar( 'footer' ); ?>
+								<?php get_template_part( 'template-parts/sidebar-footer' ); ?>
 							</div> <!-- .et_pb_column -->	
 						</div> <!-- .et_pb_row -->
 					</div>

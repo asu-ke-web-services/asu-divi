@@ -87,7 +87,7 @@ function asuwp_load_global_footer() {
 function asuwp_add_home_menu_icon ( $items, $args ) {
     if ($args->theme_location == 'primary-menu') {
 
-        if (is_home()) {
+        if (is_front_page()) {
             $homeicon = '<li id="menu-item-home" class="menu_item current-menu-item">';
         } else {
             $homeicon = '<li id="menu-item-home" class="menu_item">';

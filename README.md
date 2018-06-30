@@ -1,43 +1,29 @@
-## ASU Divi
-A child theme of Divi created for ASU. Current development site: 
-https://researchwebservices.rtd.asu.edu/
+# ASU Divi
 
+A child theme of Divi, by Elegant Themes. Originally a fork from KED at ASU. (Last update from original was 1.0.14.)
 
 ## Description
 
-A theme for use with Arizona State University websites. The Divi theme, by Elegant Themes, allows you to create beautiful websites without knowing any code. This child theme is customized to conform to ASU Web Standards and includes the latest ASU header and footer. With proper installation improvements made to this child theme should be reflected in the WordPress updater.
+A theme for use with Arizona State University websites. The Divi theme, by Elegant Themes, allows you to create websites without knowing any code. This child theme is customized to approximate the design patters found with the ASU Web Standards guidelines. This child theme includes the following assets.
 
+- ASU Header and Footer, version 4.6
+- Font Awesome, version 4.7
+- Google Font "Roboto", part of the ASU Web Standards.
 
-## Recommended Installation
+## Requirements
 
-For proper usage please follow the installation instructions provided. This includes installation of GitHub Updater which allows this Child Theme to leverage the WordPress update feature.
+The parent theme for ASU Divi is the excellent [Divi Theme from Elegant Themes](http://www.elegantthemes.com/gallery/divi/). If you intend to use the theme to build your own WordPress site, a separate license for the Divi Theme is necessary.
 
-1. Install WordPress.
-1. Install UpdraftPlus with Migrator.
-1. Upload backup files from Starter site.
-1. Click restore.
-1. Login as an administrator.
-1. Change administrator and default editor passwords.
+Please also note that this repository contains a child theme and not a stand-alone theme designed for use with [The Divi Builder](http://www.elegantthemes.com/plugins/divi-builder/) plugin also from Elegant Themes.
 
+This child theme is also featured in a distributed WordPress installation within ASU's preferred web host Pantheon. To initalize a site using Pantheon and ASU Divi please contact the Marketing and Communications team within the Fulton Schools of Engineering.
 
-## MIT License
+![Sparky's Trident](https://brandguide.asu.edu/sites/default/files/styles/panopoly_image_original/public/asu_brandhq_images_master_pitchfork_0.png?itok=CdnAzLZW)
 
-Copyright (c) 2017 Research Technology Operations
+### Enhancements
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+#### Version 1.1
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- Addressed small bug concerning home page icon active state in the main navigation.
+- Refactored child theme CSS to perform better with `.mega-menu` class.
+- Fixed problem with included widgets in the branded area of the footer.

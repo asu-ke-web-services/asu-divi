@@ -1,12 +1,13 @@
 /*
-  Theme Name:       ASU Divi
-  Theme URI:        https://research.asu.edu
-  Version:          1.0.14
-  Description:      A child theme of Divi created for ASU.
-  Author:           wsparkhu@asu.edu
-  Author URI:       http://research.asu.edu
+  Theme Name:       ASU Divi (ASU Engineering)
+  Theme URI:        https://engineering.asu.edu
+  Version:          1.1
+  Description:      A child theme of Divi, by Elegant Themes. Originally a fork from KED at ASU. (Last update from original was 1.0.14.)
+  Author:           steve.ryan@asu.edu
+  Author URI:       http://comm.engineering.asu.edu
   Template:         Divi
-  GitHub Theme URI: https://github.com/ASU-OKED-WEB-DEV/asu-divi
+  GitHub Theme URI: https://github.com/asuengineering/asu-divi
+
 */
 
 body {
@@ -187,17 +188,21 @@ p {
       padding: 0 !important;
   }
 }
+
+
 #top-menu > li > a {
   padding: 18px 20px !important;
   height: 54px;
   color: #ededed;
 }
+
 #top-menu li {
   display: inline-block;
-  height: 54px;
+  /* height: 54px; A specific set height here breaks the .mega-menu class */
   padding-right: 0;
   font-size: inherit;
 }
+
 #top-menu li.current-menu-ancestor>a,
 #top-menu li.current-menu-item>a {
   color: #edb059;
@@ -213,6 +218,7 @@ p {
 #top-menu .menu-item-has-children>a:first-child:after {
   right: 10px;
 }
+
 @media only screen and (max-width: 768px) {
   #asu_logo {
     width: 77px !important
