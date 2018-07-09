@@ -1,10 +1,10 @@
 /*
   Theme Name:       ASU Divi
   Theme URI:        https://research.asu.edu
-  Version:          1.0.17
+  Version:          1.0.18
   Description:      A child theme of Divi created for ASU.
   Author:           wsparkhu@asu.edu
-  Author URI:       http://research.asu.edu
+  Author URI:       https://research.asu.edu
   Template:         Divi
   GitHub Theme URI: https://github.com/ASU-OKED-WEB-DEV/asu-divi
 */
@@ -377,6 +377,28 @@ ul.menu a {
 #main-content a.et_pb_button:hover {
   border: 2px solid transparent;
 }
+.et_pb_button_module_wrapper a {
+  color: #000000;
+	background-color: #ffc627;
+	border-color: #ffc627;
+}
+.et_pb_button_module_wrapper .et_pb_button:hover {
+  color: #000000;
+	background-color: #ffd258;
+	border-color: #ffd258;
+}
+.et_contact_bottom_container button.et_pb_button {
+  color: #ededed !important;
+	background-color: #8c1d40 !important;
+	border-color: #8c1d40 !important;
+	font-size: 20px;
+	font-weight: normal;
+}
+.et_contact_bottom_container button.et_pb_button:hover {
+  color: #ffffff !important;
+	background-color: #d23153 !important;
+	border-color: #d23153 !important;
+}
 .et_pb_text_inner {
   overflow: hidden;
 }
@@ -434,4 +456,16 @@ ul.menu a {
   font-size: 18px;
   color: #000000 !important;
   background-color: #ffffff !important;
+}
+.submit-container input.ninja-forms-field  {
+  color: #ededed !important;
+	background-color: #8c1d40 !important;
+	border-color: #8c1d40 !important;
+	font-size: 20px;
+	font-weight: normal;
+}
+.submit-container input.ninja-forms-field:hover {
+  color: #ffffff !important;
+	background-color: #d23153 !important;
+	border-color: #d23153 !important;
 }
