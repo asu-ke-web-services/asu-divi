@@ -4,17 +4,17 @@
 function asuwp_enqueue_scripts() {
     
     wp_register_style( 'divi', get_template_directory_uri() . '/style.css');
-    wp_register_style( 'asu-divi', get_stylesheet_directory_uri().'/style.css', array('divi'), wp_get_theme()->get('Version'));
-    wp_register_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', false, '4.7.0' );
+    wp_register_style( 'divi-style', get_stylesheet_directory_uri().'/style.css', array('divi'), wp_get_theme()->get('Version'));
     wp_register_style( 'roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
     
+    wp_register_script( 'font-awesome-five', get_stylesheet_directory_uri().'/vendor/fontawesome-pro/js/all.js', false, '5.2.0');
     // wp_register_script( 'asu-header', 'https://www.asu.edu/asuthemes/4.6/heads/default.shtml', array() , '4.6', false );
     
     wp_enqueue_style( 'divi' );
-    wp_enqueue_style( 'asu-divi' );
-    wp_enqueue_style( 'font-awesome' );
+    wp_enqueue_style( 'divi-style' );
     wp_enqueue_style( 'roboto-font' );
     
+    wp_enqueue_script( 'font-awesome-five' );
     // wp_enqueue_script( 'asu-header' );
 
 }
@@ -27,18 +27,18 @@ function asuwp_remove_unused_divi_menus() {
 }
 add_action( 'after_setup_theme', 'asuwp_remove_unused_divi_menus', 20 );
 
-// Divi has 4 widgetized footer areas. We're removing the last two of them.
-// Sidebar-2 corresponds to the middle widget area. Sidebar-3 is now the right column.
-// The customizer settings plus the functions below make up the left column.
-function asuwp_remove_unused_divi_sidebars() {
-    unregister_sidebar( 'sidebar-4' );
-    unregister_sidebar( 'sidebar-5' );
-}
-add_action( 'widgets_init', 'asuwp_remove_unused_divi_sidebars', 20 );
-
-// Include customizer additions for ASU Global Header / Footer
+// Include customizer additions for ASU Global Header
 // Inspired by GIOS theme for WordPress
 require get_stylesheet_directory() . '/inc/customizer.php';
+
+// Include additional widgets for Super Footer. Uses Carbon Fields.
+add_action( 'after_setup_theme', 'asufse_crb_load_widgets' );
+function asufse_crb_load_widgets() {
+    require_once( 'vendor/autoload.php' );
+    \Carbon_Fields\Carbon_Fields::boot();
+
+    include_once( 'inc/super-footer-widgets.php' );
+}
 
 // Load global assets via remote get. Allows for easy access to the version in each of the URLs below.
 function asuwp_load_global_head_scripts() {
@@ -103,3 +103,4 @@ function asuwp_add_home_menu_icon ( $items, $args ) {
     return $items;
 }
 add_filter( 'wp_nav_menu_items', 'asuwp_add_home_menu_icon', 10, 2 );
+

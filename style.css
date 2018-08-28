@@ -1,7 +1,7 @@
 /*
   Theme Name:       ASU Divi (ASU Engineering)
   Theme URI:        https://engineering.asu.edu
-  Version:          1.1
+  Version:          2.0
   Description:      A child theme of Divi, by Elegant Themes. Originally a fork from KED at ASU. (Last update from original was 1.0.14.)
   Author:           steve.ryan@asu.edu
   Author URI:       http://comm.engineering.asu.edu
@@ -17,43 +17,57 @@ body {
   font-weight: 300;
   background-color: white;
 }
-h1, h2, h3, h4 ,h5, h6, strong {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
   line-height: 1.44;
   font-weight: bold;
 }
+
 h1 {
   font-size: 60px;
   line-height: 1;
   font-weight: 900;
 }
+
 h2 {
   font-size: 36px;
 }
+
 h3 {
   font-size: 24px;
 }
+
 h4 {
   font-size: 20px;
 }
+
 h5 {
   font-size: 18px;
 }
+
 h6 {
   font-size: 14px;
 }
+
 p {
   font-size: 18px;
   font-weight: 200;
 }
+
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 36px;
   }
 }
 
-
-
 /* LINK COLORS */
+
 #main-content h1 a:link,
 #main-content h1 a:visited,
 #main-content h2 a:link,
@@ -69,7 +83,11 @@ p {
 #main-content p a:link,
 #main-content p a:visited {
   color: #8c1d40;
+  border-bottom: 1px dotted #8c1d40;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out 0s;
 }
+
 #main-content h1 a:hover,
 #main-content h1 a:active,
 #main-content h2 a:hover,
@@ -86,7 +104,15 @@ p {
 #main-content p a:active {
   color: #d23153;
 }
+
+#footer-widgets .footer-widget li a,
+#footer-widgets .footer-widget p a {
+  color: #fff;
+  border-bottom: 1px dotted #ffffff;
+}
+
 /* LINKS CONTENT DARK */
+
 #main-content .et_pb_bg_layout_dark h1 a:link,
 #main-content .et_pb_bg_layout_dark h1 a:visited,
 #main-content .et_pb_bg_layout_dark h2 a:link,
@@ -101,10 +127,12 @@ p {
 #main-content .et_pb_bg_layout_dark h6 a:visited {
   color: #ffffff;
 }
+
 #main-content .et_pb_bg_layout_dark a:link,
 #main-content .et_pb_bg_layout_dark a:visited {
   color: #a9a9a9;
 }
+
 #main-content .et_pb_bg_layout_dark h1 a:hover,
 #main-content .et_pb_bg_layout_dark h1 a:active,
 #main-content .et_pb_bg_layout_dark h2 a:hover,
@@ -122,32 +150,32 @@ p {
   color: #ffc627;
 }
 
-
-
 /* HEADER */
 
 /* Site Name + Subsite Name */
+
 #sitename-wrapper {
   position: relative;
   width: 82%;
   max-width: 1100px;
   overflow: hidden;
   margin: 0 auto;
-  padding: 0 0 12px 10px !important;font-size: 24px !important;
+  padding: 0 0 12px 10px !important;
+  font-size: 24px !important;
 }
 
 #sitename-wrapper a {
-    color: #666666;
-    font-weight:bold;
-    white-space: nowrap;
-    text-decoration: none;
-    border-bottom: none;
-    transition: none;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-    letter-spacing: -0.5px;
-    line-height: 1;
-    margin-top: 5px;
-    overflow: hidden;
+  color: #666666;
+  font-weight: bold;
+  white-space: nowrap;
+  text-decoration: none;
+  border-bottom: none;
+  transition: none;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  margin-top: 5px;
+  overflow: hidden;
 }
 
 #sitename-wrapper #parent-site {
@@ -155,16 +183,18 @@ p {
 }
 
 #sitename-wrapper #parent-site:hover,
-#sitename-wrapper #current-site:hover{
+#sitename-wrapper #current-site:hover {
   color: #d23153;
 }
 
 /* Header & Navigation > Primary Menu > Menu Height 40 */
+
 #asu_hdr {
   width: 82%;
   max-width: 1100px;
   margin: 0 auto !important;
 }
+
 .logo_container {
   display: none;
 }
@@ -172,10 +202,12 @@ p {
 #main-header {
   z-index: 10;
 }
+
 #et-top-navigation {
   float: left;
   padding-left: 0 !important;
 }
+
 @media only screen and (min-width: 981px) {
   #main-header {
     top: 0 !important;
@@ -185,12 +217,11 @@ p {
   }
   .et_header_style_left #et-top-navigation,
   .et_header_style_split #et-top-navigation {
-      padding: 0 !important;
+    padding: 0 !important;
   }
 }
 
-
-#top-menu > li > a {
+#top-menu>li>a {
   padding: 18px 20px !important;
   height: 54px;
   color: #ededed;
@@ -208,13 +239,21 @@ p {
   color: #edb059;
   background: #000000;
 }
+
+#top-menu .menu-item-has-children .menu-item a {
+  font-weight: normal;
+  line-height: normal;
+}
+
 #et-secondary-nav .menu-item-has-children>a:first-child:after,
 #top-menu .menu-item-has-children>a:first-child:after {
   top: 20px;
 }
+
 #top-menu .menu-item-has-children>a:first-child {
   padding-right: 30px !important;
 }
+
 #top-menu .menu-item-has-children>a:first-child:after {
   right: 10px;
 }
@@ -224,271 +263,161 @@ p {
     width: 77px !important
   }
 }
+
 @media only screen and (max-width: 980px) {
   .mobile_nav {
     max-height: 30px !important;
   }
 }
+
 ul.menu a {
   color: #a9a9a9;
 }
+
 .et_pb_bg_layout_light ul.menu .current_page_item a {
   color: #8c1d40;
 }
+
 .et_pb_bg_layout_dark ul.menu .current_page_item a {
   color: #ffc627;
 }
+
 .et_pb_bg_layout_light ul.menu a:hover {
   color: #d23153;
 }
+
 .et_pb_bg_layout_dark ul.menu a:hover {
   color: #ffc627;
 }
 
+/* Mega Menu */
+
+/* ================================= */
+
+#top-menu li.mega-menu>ul {
+  padding: 20px 0 20px 0;
+}
+
+#top-menu li.mega-menu>ul>li>a:first-child {
+  font-weight: normal;
+}
+
+#top-menu li.mega-menu>ul>li.menu-item-has-children>a {
+  font-weight: bold;
+  border-bottom: 1px solid #FFB130;
+  font-size: 16px;
+  line-height: normal;
+  margin-bottom: 2px;
+}
+
+#top-menu li.mega-menu>ul>li>ul>li>a {
+  border-bottom: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: normal;
+}
 
 /* SINGLE */
+
+/* ================================= */
+
 .single #main-content #dce-custom-post {
   padding-top: 40px;
 }
+
 .has-post-thumbnail .et_pb_image_container {
   border-top: 1px solid #d8d8d8;
   border-left: 1px solid #d8d8d8;
   border-right: 1px solid #d8d8d8;
 }
+
 @media (max-width: 980px) {
   .et_pb_section {
     padding: 25px 0 50px 0;
   }
 }
 
-
-
 /* BLOG INDEX PAGE */
-.archive .has-post-thumbnail > a:nth-child(1),
-.search .has-post-thumbnail > a:nth-child(1),
-.blog .has-post-thumbnail > a:nth-child(1) {
+
+/* ================================= */
+
+.archive .has-post-thumbnail>a:nth-child(1),
+.search .has-post-thumbnail>a:nth-child(1),
+.blog .has-post-thumbnail>a:nth-child(1) {
   float: right;
   width: 33%;
   padding: 0 0 20px 20px;
 }
+
 .archive .has-post-thumbnail a img,
 .search .has-post-thumbnail a img,
 .blog .has-post-thumbnail a img {
   border: 5px solid #cccccc;
 }
+
 .entry-title {
   font-size: 24px !important;
 }
+
 .single .entry-title,
 .main_title {
   font-size: 36px !important;
 }
+
 .post-meta {
   padding-bottom: 15px;
   font-size: 14px !important;
   color: #999999 !important;
 }
+
 .post-meta a {
   color: #999999 !important;
 }
+
 .post-meta a:hover {
   color: #d23153 !important;
 }
+
 @media only screen and (max-width: 768px) {
-  .blog .has-post-thumbnail > * {
+  .blog .has-post-thumbnail>* {
     width: 100% !important;
   }
-  .blog .has-post-thumbnail > a:nth-child(1) {
+  .blog .has-post-thumbnail>a:nth-child(1) {
     display: none;
   }
 }
 
-/* Footer, Branding Area */
-
-#main-footer div,
-#main-footer p,
-#main-footer span {
-    color: #fff
-}
-
-#main-footer h1 {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.2
-}
-
-#main-footer h2 {
-    color: #fff;
-    font-size: 1.3125rem;
-    font-weight: 400
-}
-
-#main-footer h3,
-#main-footer h4,
-#main-footer h5,
-#main-footer h6 {
-    color: #fff
-}
-
-#main-footer .et_pb_row {
-  padding:40px 0;
-}
-
-#main-footer .footer-logo {
-  /* Transform the default image to 112.5% of the original size to get rid of embedded padding. */
-  transform: scale(1.125, 1.125);
-  transition: .5s;
-  transform-origin: center;
-}
-
-#main-footer .footer-logo:hover {
-  /* Scale up to 120% on hover. */
-  transform: scale(1.2, 1.2);
-}
-
-#main-footer #footer-branding .footer-text {
-    padding-bottom: 10px;
-}
-
-#main-footer .phone-link,#main-footer a:not(.et_pb_button),#main-footer address {
-    border-bottom-color: #ccc;
-    color: #ccc;
-    margin-bottom: 0
-}
-
-#main-footer .contact-link {
-    border-bottom-color: #a9a9a9;
-    border-bottom-style: dotted;
-    border-bottom-width: 1px;
-    color: #a9a9a9
-}
-
-#main-footer .contact-link:focus,#main-footer .contact-link:hover {
-    color: #fff
-}
-
-#main-footer ol,#main-footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0
-}
-
-#main-footer ol:after,#main-footer ol:before,#main-footer ul:after,#main-footer ul:before {
-    content: ' ';
-    display: table
-}
-
-#main-footer ol:after,#main-footer ul:after {
-    clear: both
-}
-
-#main-footer ol>li,#main-footer ul>li {
-    display: block;
-    position: relative
-}
-
-#main-footer ol>li>a,#main-footer ul>li>a {
-    position: relative;
-    text-decoration: none
-}
-
-#main-footer ol>li>a:focus,#main-footer ol>li>a:hover,#main-footer ul>li>a:focus,#main-footer ul>li>a:hover {
-    text-decoration: none
-}
-
-#main-footer .social-media {
-    margin-bottom: 30px
-}
-
-#main-footer .social-media>li {
-    float: left
-}
-
-#main-footer .social-media>li>a {
-    border-bottom: 0;
-    color: #a9a9a9;
-    font-size: 2.375rem;
-    margin-right: 10px
-}
-
-#main-footer .social-media>li>a:focus,#main-footer .social-media>li>a:hover {
-    color: #fff
-}
-
-#main-footer .social-media>li:last-child>a {
-    margin-right: 0
-}
-
-#contribute-button-in-footer {
-    border-color: #8c1d40;
-    color: #ffffff;
-    background-color: #8c1d40;
-}
-
-#main-footer #footer-widgets {
-  padding:10px 0;
-}
-
-#footer-widgets .footer-widget {
-    /* Assuming there are only two widget areas left... */
-    width: 44%;
-}
-
-
-/* FOOTER */
-#innovation-footer {
-  box-shadow: 0px 500px 0px 500px #E5E5E5;
-}
-#footer-widgets #main-footer-widget .title {
-  color: #ffffff;
-}
-#footer-widgets #main-footer-widget a:link,
-#footer-widgets #main-footer-widget a:visited {
-  color: #a9a9a9 !important;
-}
-#footer-widgets #main-footer-widget a:hover,
-#footer-widgets #main-footer-widget a:active {
-  color: #ffc627 !important;
-}
-#footer-widgets #main-footer-widget li {
-  position: relative;
-  padding-left: 0;
-}
-#footer-widgets #main-footer-widget li:before {
-  border: none;
-}
-@media only screen and (max-width: 980px) {
-  #main-footer-widget:nth-child(1) {
-      width: 100%!important;
-  }
-}
-
-
-
 /* SIDEBAR */
+
+/* ================================= */
+
 #sidebar a:link,
 #sidebar a:visited {
   color: #666666;
 }
+
 #sidebar .current_page_item a {
   font-weight: bold;
   color: #000000;
 }
+
 #sidebar a:hover,
 #sidebar a:active {
   color: #d23153;
 }
+
 #main-content .et_pb_widget ul {
   padding-top: 10px !important;
 }
+
 #main-content .et_pb_widget ul li {
   margin-bottom: .5em;
   padding-bottom: 10px;
 }
+
 @media only screen and (max-width: 980px) {
-  #asu_hdr #asu_mobile_hdr > #asu_mobile_button,
-  #asu_hdr > #asu_mobile_hdr > .f-search {
+  #asu_hdr #asu_mobile_hdr>#asu_mobile_button,
+  #asu_hdr>#asu_mobile_hdr>.f-search {
     width: 0;
     height: 0;
     overflow: hidden;
@@ -500,7 +429,7 @@ ul.menu a {
   #et_mobile_nav_menu {
     display: block;
   }
-  #main-content	.et_pb_widget {
+  #main-content .et_pb_widget {
     width: 100% !important;
   }
   #main-content .et_pb_widget ul {
@@ -511,62 +440,75 @@ ul.menu a {
   }
 }
 
-
-
 /* CONTAINERS AND CONTENT AREA SPACING */
+
+/* ================================= */
+
 #main-content .container {
   padding-top: 58px;
   padding-bottom: 58px;
 }
+
 @media only screen and (max-width: 980px) {
   .et_pb_section {
-      padding: 0 0 0 0;
+    padding: 0 0 0 0;
   }
 }
 
-
-
 /* DIVI COMPONENT OVERRIDES */
-#main-content a.et_pb_button:hover {
-  border: 2px solid transparent;
+
+/* ================================= */
+
+/* Fix fullwidth menu display, eliminate large space btw link and dotted underline*/
+
+.et_pb_fullwidth_menu li a {
+  padding-bottom: 3px;
 }
-#main-content a.et_pb_button.et_pb_bg_layout_light {
-  color: #ffc627 !important;
-}
-#main-content a.et_pb_button.et_pb_bg_layout_dark {
-  color: #ffc627 !important;
-}
+
 .et_pb_text_inner {
   overflow: hidden;
 }
+
 /* TABLE BORDERS WHITE */
-.entry-content table, body.et-pb-preview #main-content .container table {
+
+/* ================================= */
+
+.entry-content table,
+body.et-pb-preview #main-content .container table {
   border: 1px solid #fff;
 }
-.entry-content tr td, body.et-pb-preview #main-content .container tr td {
-    border-top: 1px solid #fff;
+
+.entry-content tr td,
+body.et-pb-preview #main-content .container tr td {
+  border-top: 1px solid #fff;
 }
+
 /* TABLES ENABLE SCROLLING ON MOBILE */
+
 @media only screen and (max-width: 768px) {
   .et_pb_text_inner {
-    overflow-x:auto;
+    overflow-x: auto;
   }
   .et_pb_text_inner table tr td {
     padding: 5px;
   }
 }
 
-
 /* CAPTIONS */
+
+/* ================================= */
+
 .wp-caption {
   float: right;
   max-width: 50% !important;
   margin-left: 20px;
   padding-top: 8px;
 }
+
 .wp-caption img {
   width: 100%;
 }
+
 @media all and (max-width: 767px) {
   .wp-caption {
     max-width: 100% !important;
@@ -574,16 +516,19 @@ ul.menu a {
   }
 }
 
-
-
 /* NINJA FORMS */
+
+/* ================================= */
+
 .nf-form-cont {
   max-width: 700px;
-	margin: 0 auto;
+  margin: 0 auto;
 }
+
 .nf-form-cont .nf-field {
-	margin: 30px 0 0 0;
+  margin: 30px 0 0 0;
 }
+
 .nf-form-cont input,
 .nf-form-cont textarea {
   padding: 16px !important;
@@ -593,4 +538,105 @@ ul.menu a {
   font-size: 18px;
   color: #000000 !important;
   background-color: #ffffff !important;
+}
+
+/* ASU Super Footer Widgets */
+
+/* ================================= */
+
+/* Endorsed logo transform on hover */
+
+.carbon_fields_asu-super-footer-endorsed-logo .footer-logo {
+  transition-duration: .5s;
+  transform: scale3d(1, 1, 1);
+  transform-origin: top left;
+  padding-bottom: 10px;
+  margin-left: -20px;
+}
+
+.carbon_fields_asu-super-footer-endorsed-logo .footer-logo:hover {
+  transform: scale3d(1.05, 1.05, 1.05);
+  cursor: pointer;
+}
+
+.carbon_fields_asu-super-footer-endorsed-logo .phone-link svg {
+  margin-right: 10px;
+}
+
+.carbon_fields_asu-super-footer-endorsed-logo .et_pb_button_contribute,
+.carbon_fields_asu-super-footer-social-media .et_pb_button_contribute {
+  color: #ffffff;
+  background-color: #8c1d40;
+  border-color: #8c1d40;
+}
+
+#footer-widgets .carbon_fields_asu-super-footer-social-media .social-icons {
+  float: none;
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+#footer-widgets .carbon_fields_asu-super-footer-social-media .social-icons li {
+  margin-left: 0;
+  padding-left: 0;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+#footer-widgets .carbon_fields_asu-super-footer-social-media .social-icons li:before {
+  border-style: none;
+  border-width: 0;
+  /* Turns off the Divi fake bullets before li items */
+}
+
+#footer-widgets .carbon_fields_asu-super-footer-social-media .social-icons a {
+  color: #a9a9a9 !important;
+  font-size: 40px;
+  border-bottom: none;
+  line-height: 1;
+}
+
+#footer-widgets .carbon_fields_asu-super-footer-social-media .social-icons a:hover {
+  color: #ffffff !important;
+}
+
+/* Deals with margin-bottom under endorsed logo widget & social icon widgets */
+
+/* Near zero margin by default, but if contribute link is present, sets it back to normal. */
+
+#footer-widgets .carbon_fields_asu-super-footer-endorsed-logo,
+#footer-widgets .carbon_fields_asu-super-footer-social-media {
+  margin-bottom: 7.5%;
+}
+
+#footer-widgets .carbon_fields_asu-super-footer-endorsed-logo .et_pb_button_contribute,
+#footer-widgets .carbon_fields_asu-super-footer-social-media .et_pb_button_contribute {
+  margin-bottom: 20%;
+}
+
+/* Utility Classes
+/* ================================= */
+
+/* Mimic the ASU Sidebar styling */
+
+.asu-sidebar-col {
+  border-top: 8px solid #8C1D40;
+  margin: 0;
+  padding: 10px 30px 30px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+  border-left: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+}
+
+/* styles for directory sections - ASU WS */
+
+.directory-section {
+  border-top: 2px solid #ededed;
+  border-bottom: 2px solid #ededed;
+  margin: 0;
+  padding: 2px;
+  background-color: #ffffff;
 }
