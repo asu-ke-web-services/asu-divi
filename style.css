@@ -18,6 +18,15 @@ body {
   background-color: white;
 }
 
+/* Standard clearfix applied specifically to the header */
+/* Addresses known problems where full width elements fall directly under main nav. */
+/* Avoids additional problems where the same rule "breaks" other Divi modules when applied. */
+#main-header .clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 h1,
 h2,
 h3,
@@ -57,7 +66,7 @@ h6 {
 
 p {
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 768px) {

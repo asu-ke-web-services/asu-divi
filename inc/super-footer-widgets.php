@@ -65,11 +65,26 @@ class ASUSuperFooterEndorsedLogo extends Widget {
             echo '<img class="footer-logo" src="' . get_stylesheet_directory_uri() . '/assets/endorsed-logos/' . $logosrc . '" alt="' . $logoalt . '">';
             echo '</a></div>';
         }
-        echo '<p>' . $instance['logo-summary'] . '</p>';
-        echo '<p>' . $instance['logo-parent-org'] . '</p>';
-        echo '<p class="contact-link"><a href="' . $instance['logo-contact'] . '" target="_blank">Contact Us</a></p>';
-        echo '<p class="phone-link"><i class="fas fa-phone" data-fa-transform="flip-h"></i>Phone: ' . $instance['logo-phone'] . '</p>';
-        echo '<p class="phone-link"><i class="fas fa-fax"></i>Fax: ' . $instance['logo-fax'] . '</p>';
+
+        if (! empty($instance['logo-summary'])) {
+            echo '<p>' . $instance['logo-summary'] . '</p>';
+        }
+        
+        if (! empty($instance['logo-parent-org'])) {
+            echo '<p>' . $instance['logo-parent-org'] . '</p>';
+        }
+        
+        if (! empty($instance['logo-contact'])) {
+            echo '<p class="contact-link"><a href="' . $instance['logo-contact'] . '" target="_blank">Contact Us</a></p>';
+        }
+        
+        if (! empty($instance['logo-phone'])) {
+            echo '<p class="phone-link"><i class="fas fa-phone" data-fa-transform="flip-h"></i>Phone: ' . $instance['logo-phone'] . '</p>';
+        }
+        
+        if (! empty($instance['logo-fax'])) {
+            echo '<p class="phone-link"><i class="fas fa-fax"></i>Fax: ' . $instance['logo-fax'] . '</p>';
+        }
         
         if (! empty($instance['logo-contribute'])) {
             echo '<div class="et_pb_button_module_wrapper et_pb_button_alignment_left et_pb_module">';
