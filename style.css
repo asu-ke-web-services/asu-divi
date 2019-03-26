@@ -1,7 +1,7 @@
 /*
   Theme Name:       ASU Divi (ASU Engineering)
   Theme URI:        https://engineering.asu.edu
-  Version:          2.0
+  Version:          2.1
   Description:      A child theme of Divi, by Elegant Themes. Originally a fork from KED at ASU. (Last update from original was 1.0.14.)
   Author:           steve.ryan@asu.edu
   Author URI:       http://comm.engineering.asu.edu
@@ -416,18 +416,12 @@ ul.menu a {
 }
 
 @media only screen and (max-width: 980px) {
-  #asu_hdr #asu_mobile_hdr>#asu_mobile_button,
-  #asu_hdr>#asu_mobile_hdr>.f-search {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    padding: 0;
-  }
   .et_menu_container {
-    height: 80px;
+    height: 81px;
   }
   #et_mobile_nav_menu {
-    display: block;
+    display: none;
+    /* Content copied into ASU Header module via JS */
   }
   #main-content .et_pb_widget {
     width: 100% !important;

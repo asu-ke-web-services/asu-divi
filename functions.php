@@ -1,20 +1,36 @@
 <?php
 
-/* Register, enqueue scripts, execute action */
+/* Remove reference to parent stylesheet to prevent it from loading twice. */
+function asuwp_unhook_parent_style() {
+
+    wp_dequeue_style( 'divi-style' );
+    wp_deregister_style( 'divi-style' );
+  
+  }
+add_action( 'wp_enqueue_scripts', 'asuwp_unhook_parent_style', 20 );
+
 function asuwp_enqueue_scripts() {
+
+    $the_theme     = wp_get_theme();
+    $theme_version = $the_theme->get( 'Version' );
     
+    $child_css_version = $theme_version . '.' . filemtime( get_stylesheet_directory().'/style.css');
+    $js_version = $theme_version . '.' . filemtime( get_template_directory() . '/inc/js/divi-to-asu-mobile.js' );
+
     wp_register_style( 'divi', get_template_directory_uri() . '/style.css');
-    wp_register_style( 'divi-style', get_stylesheet_directory_uri().'/style.css', array('divi'), wp_get_theme()->get('Version'));
+    wp_register_style( 'asudivi', get_stylesheet_uri(), array(), $child_css_version );
     wp_register_style( 'roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
     
-    wp_register_script( 'font-awesome-five', get_stylesheet_directory_uri().'/vendor/fontawesome-pro/js/all.js', false, '5.2.0');
-    // wp_register_script( 'asu-header', 'https://www.asu.edu/asuthemes/4.6/heads/default.shtml', array() , '4.6', false );
+    wp_register_script( 'font-awesome-five', get_stylesheet_directory_uri().'/vendor/fontawesome-pro/js/all.js', array(), '5.2.0', false);
+    wp_register_script( 'divi-to-asu-mobile', get_stylesheet_directory_uri().'/inc/js/divi-to-asu-mobile.js', array(), $js_version, false);
+    wp_register_script( 'asu-header', 'https://www.asu.edu/asuthemes/4.6/heads/default.shtml', array() , '4.6', false );
     
     wp_enqueue_style( 'divi' );
-    wp_enqueue_style( 'divi-style' );
+    wp_enqueue_style( 'asudivi' );
     wp_enqueue_style( 'roboto-font' );
     
     wp_enqueue_script( 'font-awesome-five' );
+    wp_enqueue_script( 'divi-to-asu-mobile' );
     // wp_enqueue_script( 'asu-header' );
 
 }
@@ -31,18 +47,21 @@ add_action( 'after_setup_theme', 'asuwp_remove_unused_divi_menus', 20 );
 // Inspired by GIOS theme for WordPress
 require get_stylesheet_directory() . '/inc/customizer.php';
 
-// Include additional widgets for Super Footer. Uses Carbon Fields.
+// Include additional widgets for Super Footer.
+// Include filter screen for blog module image sites.
+// Both includes use Carbon Fields.
 add_action( 'after_setup_theme', 'asufse_crb_load_widgets' );
 function asufse_crb_load_widgets() {
     require_once( 'vendor/autoload.php' );
     \Carbon_Fields\Carbon_Fields::boot();
 
     include_once( 'inc/super-footer-widgets.php' );
+    include_once( 'inc/blog-module-image-filter.php');
 }
 
 // Load global assets via remote get. Allows for easy access to the version in each of the URLs below.
 function asuwp_load_global_head_scripts() {
-	$request = wp_remote_get('http://www.asu.edu/asuthemes/4.6/heads/default.shtml');
+	$request = wp_remote_get('http://www.asu.edu/asuthemes/4.8/heads/default.shtml');
 	$response = wp_remote_retrieve_body( $request );
 	echo $response;
 }
@@ -67,7 +86,7 @@ function asuwp_load_header_sitenames() {
 
 // Remote get ASU global header elements. Print site name along with returned code.
 function asuwp_load_global_header() {
-    $request = wp_remote_get('http://www.asu.edu/asuthemes/4.6/headers/default.shtml');
+    $request = wp_remote_get('http://www.asu.edu/asuthemes/4.8/headers/default.shtml');
     $response = wp_remote_retrieve_body( $request );
 
     $parent = asuwp_load_header_sitenames();
@@ -78,7 +97,7 @@ function asuwp_load_global_header() {
 }
 // Remote get ASU global footer elements.
 function asuwp_load_global_footer() {
-    $request = wp_remote_get('http://www.asu.edu/asuthemes/4.6/includes/footer.shtml');
+    $request = wp_remote_get('http://www.asu.edu/asuthemes/4.8/includes/footer.shtml');
     $response = wp_remote_retrieve_body( $request );
     echo $response;
 }
@@ -103,4 +122,25 @@ function asuwp_add_home_menu_icon ( $items, $args ) {
     return $items;
 }
 add_filter( 'wp_nav_menu_items', 'asuwp_add_home_menu_icon', 10, 2 );
+
+
+// ===============================================
+// Blog Image Size Filters: Blog Image Width / Height
+// ===============================================
+
+function asufse_custom_image_width($imagewidth) {
+    $imagewidth = get_option( 'asudivi-blog-module-filter-width' );
+    return $imagewidth;
+}
+
+function asufse_custom_image_height($imageheight) {
+    $imageheight = get_option( 'asudivi-blog-module-filter-height' );
+    return $imageheight;
+}
+
+$useimages = get_option( 'asudivi-blog-module-filter-state' );
+if (!empty($useimages)) {
+    add_filter( 'et_pb_blog_image_width', 'asufse_custom_image_width' );
+    add_filter( 'et_pb_blog_image_height', 'asufse_custom_image_height' );
+}
 
