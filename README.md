@@ -22,6 +22,13 @@ This child theme is also featured in a distributed WordPress installation within
 
 ## Enhancements
 
+### Version 2.1
+
+Changes include:
+
+- The global ASU Header and Footer modules were updated to v4.8
+- The site's main menu is now being displayed within the ASU mobile menu (delivered as a part of the global header component).
+
 ### Version 2.0
 
 The newest version of the ASU Divi theme makes some significant changes in the provided CSS with the intent to avoid scripting Divi module values as much as possible. Moving forward, we would prefer that "Divi be Divi" and that the child theme generally stays out of its way. Users of the theme are expected to know how to use the theme's options to deliver a result that aligns with the general principals of the ASU Brand Standard.
