@@ -53,19 +53,30 @@ jQuery(document).ready(function(){
             }
 
         });
-        asu_universal_nav_new_ul.addClass('et-menu-added');
-    });
 
+        asu_universal_nav_new_ul.addClass('et-menu-added');
+
+        // The resulting first <li> in the object will be the home icon with no text. Add the word "home."
+        asu_universal_nav_new_ul.children(":first").find('a').html('Home');
+
+        // Add separator between this site's content and the global ASU additions.
+        asu_universal_nav_new_ul.find('li.site_title').after('<li class="tlb empty"><span>Other ASU Resources</span></li>')
+
+        // Move original site-title element to the first position. Add content from #sitename into menu item.
+        var current_site_name = jQuery('#sitename-wrapper #current-site').html();
+        asu_universal_nav_new_ul.find('li.site_title').prependTo(asu_universal_nav_new_ul).html('<span>' + current_site_name + '</span>');
+    });
 
     jQuery( 'body' ).on( 'click', '.asu-icn', function() {
         var navigation_item = jQuery( this );
         var parent_menu_list_item = jQuery( this ).parents('.tlb');
+        var child_menu_list_item = '';
         if ( navigation_item.hasClass('f-sort-down') ){
-            var child_menu_list_item = parent_menu_list_item.next('.closed');
+            child_menu_list_item = parent_menu_list_item.next('.closed');
             child_menu_list_item.removeClass('closed').addClass('opened');
             navigation_item.removeClass('f-sort-down').addClass('f-sort-up');
-        }else if ( navigation_item.hasClass('f-sort-up') ) {
-            var child_menu_list_item = parent_menu_list_item.next('.opened');
+        } else if ( navigation_item.hasClass('f-sort-up') ) {
+            child_menu_list_item = parent_menu_list_item.next('.opened');
             child_menu_list_item.removeClass('opened').addClass('closed');
             navigation_item.removeClass('f-sort-up').addClass('f-sort-down');
         }

@@ -22,6 +22,10 @@ This child theme is also featured in a distributed WordPress installation within
 
 ## Enhancements
 
+### Version 2.2
+
+This release features more adjustments to the mobile menu which bring the theme into closer alignment with a typical site built with WebSpark. The main CSS file was also reorganized a bit for clarity.
+
 ### Version 2.1
 
 Changes include:

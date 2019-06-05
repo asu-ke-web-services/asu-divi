@@ -1,7 +1,7 @@
 /*
   Theme Name:       ASU Divi (ASU Engineering)
   Theme URI:        https://engineering.asu.edu
-  Version:          2.1
+  Version:          2.2
   Description:      A child theme of Divi, by Elegant Themes. Originally a fork from KED at ASU. (Last update from original was 1.0.14.)
   Author:           steve.ryan@asu.edu
   Author URI:       http://comm.engineering.asu.edu
@@ -159,45 +159,10 @@ p {
   color: #ffc627;
 }
 
-/* HEADER */
+/* ASU Header & Main Navigation
+-------------------------------- */
 
-/* Site Name + Subsite Name */
-
-#sitename-wrapper {
-  position: relative;
-  width: 82%;
-  max-width: 1100px;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 0 0 12px 10px !important;
-  font-size: 24px !important;
-}
-
-#sitename-wrapper a {
-  color: #666666;
-  font-weight: bold;
-  white-space: nowrap;
-  text-decoration: none;
-  border-bottom: none;
-  transition: none;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: -0.5px;
-  line-height: 1;
-  margin-top: 5px;
-  overflow: hidden;
-}
-
-#sitename-wrapper #parent-site {
-  color: #2a2a2a;
-}
-
-#sitename-wrapper #parent-site:hover,
-#sitename-wrapper #current-site:hover {
-  color: #d23153;
-}
-
-/* Header & Navigation > Primary Menu > Menu Height 40 */
-
+/* Global Header */
 #asu_hdr {
   width: 82%;
   max-width: 1100px;
@@ -212,35 +177,56 @@ p {
   z-index: 10;
 }
 
+/* Site Name + Subsite Name */
+#sitename-wrapper .sitename {
+  position: relative;
+  width: 82%;
+  max-width: 1100px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 0 12px 10px;
+  font-size: 24px;
+}
+
+#sitename-wrapper .sitename a {
+  color: #666666;
+  font-weight: bold;
+  white-space: nowrap;
+  text-decoration: none;
+  border-bottom: none;
+  transition: none;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+#sitename-wrapper .sitename #parent-site {
+  color: #2a2a2a;
+}
+
+#sitename-wrapper .sitename #parent-site:hover,
+#sitename-wrapper .sitename #current-site:hover {
+  color: #d23153;
+}
+
+/* Primary Menu */
+
 #et-top-navigation {
   float: left;
   padding-left: 0 !important;
 }
 
-@media only screen and (min-width: 981px) {
-  #main-header {
-    top: 0 !important;
-    height: 54px;
-    line-height: 22px;
-    background: #353535;
-  }
-  .et_header_style_left #et-top-navigation,
-  .et_header_style_split #et-top-navigation {
-    padding: 0 !important;
-  }
-}
-
 #top-menu>li>a {
   padding: 18px 20px !important;
-  height: 54px;
   color: #ededed;
 }
 
 #top-menu li {
   display: inline-block;
-  /* height: 54px; A specific set height here breaks the .mega-menu class */
   padding-right: 0;
-  font-size: inherit;
+  font-size: 16px;
 }
 
 #top-menu li.current-menu-ancestor>a,
@@ -254,8 +240,8 @@ p {
   line-height: normal;
 }
 
-#et-secondary-nav .menu-item-has-children>a:first-child:after,
-#top-menu .menu-item-has-children>a:first-child:after {
+#top-menu .menu-item-has-children>a:first-child:after,
+#et-secondary-nav .menu-item-has-children>a:first-child:after {
   top: 20px;
 }
 
@@ -265,18 +251,6 @@ p {
 
 #top-menu .menu-item-has-children>a:first-child:after {
   right: 10px;
-}
-
-@media only screen and (max-width: 768px) {
-  #asu_logo {
-    width: 77px !important
-  }
-}
-
-@media only screen and (max-width: 980px) {
-  .mobile_nav {
-    max-height: 30px !important;
-  }
 }
 
 ul.menu a {
@@ -300,9 +274,6 @@ ul.menu a {
 }
 
 /* Mega Menu */
-
-/* ================================= */
-
 #top-menu li.mega-menu>ul {
   padding: 20px 0 20px 0;
 }
@@ -326,8 +297,58 @@ ul.menu a {
   line-height: normal;
 }
 
-/* SINGLE */
+/* Media Queries */
+@media only screen and (max-width: 990px) {
+  .mobile_nav {
+    max-height: 30px !important;
+  }
 
+  #sitename-wrapper {
+    background-color:#353535;
+  }
+
+  #sitename-wrapper .sitename,
+  #sitename-wrapper .sitename a,
+  #sitename-wrapper .sitename #parent-site {
+    font-size:15px;
+    color:#ffffff;
+    padding:9px 10px;
+  }
+
+  #asu_universal_nav_new li.empty > span {
+    display: block;
+    padding: 12px 15px;
+    color: #fff;
+    background-color: #505558;
+    line-height: 1em;
+    letter-spacing: -0.5px;
+  }
+
+  #main-header {
+    display:none;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  #main-header {
+    top: 0 !important;
+    height: 54px;
+    line-height: 22px;
+    background: #353535;
+  }
+  .et_header_style_left #et-top-navigation,
+  .et_header_style_split #et-top-navigation {
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #asu_logo {
+    width: 77px !important
+  }
+}
+
+/* SINGLE */
 /* ================================= */
 
 .single #main-content #dce-custom-post {
@@ -347,7 +368,6 @@ ul.menu a {
 }
 
 /* BLOG INDEX PAGE */
-
 /* ================================= */
 
 .archive .has-post-thumbnail>a:nth-child(1),
@@ -397,7 +417,6 @@ ul.menu a {
 }
 
 /* SIDEBAR */
-
 /* ================================= */
 
 #sidebar a:link,
@@ -444,7 +463,6 @@ ul.menu a {
 }
 
 /* CONTAINERS AND CONTENT AREA SPACING */
-
 /* ================================= */
 
 #main-content .container {
@@ -459,7 +477,6 @@ ul.menu a {
 }
 
 /* DIVI COMPONENT OVERRIDES */
-
 /* ================================= */
 
 /* Fix fullwidth menu display, eliminate large space btw link and dotted underline*/
@@ -473,7 +490,6 @@ ul.menu a {
 }
 
 /* TABLE BORDERS WHITE */
-
 /* ================================= */
 
 .entry-content table,
@@ -498,7 +514,6 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 /* CAPTIONS */
-
 /* ================================= */
 
 .wp-caption {
@@ -520,7 +535,6 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 /* NINJA FORMS */
-
 /* ================================= */
 
 .nf-form-cont {
@@ -544,7 +558,6 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 /* ASU Super Footer Widgets */
-
 /* ================================= */
 
 /* Endorsed logo transform on hover */
@@ -604,7 +617,6 @@ body.et-pb-preview #main-content .container tr td {
 }
 
 /* Deals with margin-bottom under endorsed logo widget & social icon widgets */
-
 /* Near zero margin by default, but if contribute link is present, sets it back to normal. */
 
 #footer-widgets .carbon_fields_asu-super-footer-endorsed-logo,

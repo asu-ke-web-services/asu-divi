@@ -15,7 +15,7 @@ function asuwp_enqueue_scripts() {
     $theme_version = $the_theme->get( 'Version' );
     
     $child_css_version = $theme_version . '.' . filemtime( get_stylesheet_directory().'/style.css');
-    $js_version = $theme_version . '.' . filemtime( get_template_directory() . '/inc/js/divi-to-asu-mobile.js' );
+    $js_version = $theme_version . '.' . filemtime( get_stylesheet_directory() . '/inc/js/divi-to-asu-mobile-min.js' );
 
     wp_register_style( 'divi', get_template_directory_uri() . '/style.css');
     wp_register_style( 'asudivi', get_stylesheet_uri(), array(), $child_css_version );
@@ -91,7 +91,7 @@ function asuwp_load_global_header() {
 
     $parent = asuwp_load_header_sitenames();
 
-    $response .= '<div id="sitename-wrapper">' . $parent . '<a href="'. get_home_url() . '" title="Home" rel="home" id="current-site">'. get_bloginfo( 'name' ) . '</a></div>';
+    $response .= '<div id="sitename-wrapper"><div class="sitename">' . $parent . '<a href="'. get_home_url() . '" title="Home" rel="home" id="current-site">'. get_bloginfo( 'name' ) . '</a></div></div>';
     echo $response;
 
 }
